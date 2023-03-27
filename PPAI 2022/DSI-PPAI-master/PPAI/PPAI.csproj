@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CDB83128-9872-41ED-9635-B7955355DDB6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PPAI</RootNamespace>
+    <AssemblyName>PPAI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\AsignacionCientifico.cs" />
+    <Compile Include="Clases\CambioEstadoRT.cs" />
+    <Compile Include="Clases\CambioEstadoTurno.cs" />
+    <Compile Include="Clases\CentroInvestigacion.cs" />
+    <Compile Include="Clases\DisponibleR.cs" />
+    <Compile Include="Clases\Estado.cs" />
+    <Compile Include="Clases\Mantenimiento.cs" />
+    <Compile Include="Clases\MantenimientoCorrectivo.cs" />
+    <Compile Include="Clases\Notificador.cs" />
+    <Compile Include="Clases\NotificadorMail.cs" />
+    <Compile Include="Clases\NotificadorTelefono.cs" />
+    <Compile Include="Clases\Disponible.cs" />
+    <Compile Include="Clases\Reservado.cs" />
+    <Compile Include="Clases\ReservaPendienteDeConfirmacion.cs" />
+    <Compile Include="Gestor\Gestor.cs" />
+    <Compile Include="Clases\Marca.cs" />
+    <Compile Include="Clases\Modelo.cs" />
+    <Compile Include="Clases\PersonalCientifico.cs" />
+    <Compile Include="Clases\RecursoTecnologico.cs" />
+    <Compile Include="Clases\Sesion.cs" />
+    <Compile Include="Clases\TipoRecursoTecnologico.cs" />
+    <Compile Include="Clases\Turno.cs" />
+    <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Pantallas\Confirmar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Confirmar.designer.cs">
+      <DependentUpon>Confirmar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\frmNotificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\frmNotificacion.Designer.cs">
+      <DependentUpon>frmNotificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\LogIn.designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Principal.designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\reservarRT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\reservarRT.designer.cs">
+      <DependentUpon>reservarRT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositorio\AsignacionCientificoRepositorio.cs" />
+    <Compile Include="Repositorio\CambioEstadoRTRepositorio.cs" />
+    <Compile Include="Repositorio\CambioEstadoTurnoRepositorio.cs" />
+    <Compile Include="Repositorio\CentroInvestigacionRepositorio.cs" />
+    <Compile Include="Repositorio\ConexionBD.cs" />
+    <Compile Include="Repositorio\MarcaRepositorio.cs" />
+    <Compile Include="Repositorio\ModeloRepositorio.cs" />
+    <Compile Include="Repositorio\PersonalCientificoRepositorio.cs" />
+    <Compile Include="Repositorio\RecursoTecnologicoRepositorio.cs" />
+    <Compile Include="Repositorio\TipoRecursoTecnologicoRepositorio.cs" />
+    <Compile Include="Repositorio\TurnoRepositorio.cs" />
+    <Compile Include="Repositorio\UsuarioRepositorio.cs" />
+    <Compile Include="Servicios\CentroInvestigacionServicio.cs" />
+    <Compile Include="Servicios\GestorServicios.cs" />
+    <Compile Include="Servicios\MarcaServicios.cs" />
+    <Compile Include="Servicios\PersonalCientificoServicios.cs" />
+    <Compile Include="Servicios\RecursoTecnologicoServicio.cs" />
+    <Compile Include="Servicios\TipoRecursoTecnologicoServicio.cs" />
+    <Compile Include="Servicios\UsuarioServicio.cs" />
+    <EmbeddedResource Include="Pantallas\Confirmar.resx">
+      <DependentUpon>Confirmar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\frmNotificacion.resx">
+      <DependentUpon>frmNotificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\reservarRT.resx">
+      <DependentUpon>reservarRT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logInBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+    <Content Include="Resources\done.png" />
+    <Content Include="Resources\error.png" />
+    <Content Include="Resources\info.png" />
+    <Content Include="Resources\success.png" />
+    <Content Include="Resources\warning.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
